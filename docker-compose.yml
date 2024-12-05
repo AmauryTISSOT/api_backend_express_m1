@@ -1,0 +1,13 @@
+services:
+    db:
+        image: postgres:latest
+        ports:
+            - "5558:5432"
+        environment:
+            POSTGRES_USER: amaury
+            POSTGRES_PASSWORD: test123!
+            POSTGRES_DB: api_backend_express_m1
+        volumes:
+            - db_data:/var/lib/postgresql/data
+volumes:
+    db_data:
